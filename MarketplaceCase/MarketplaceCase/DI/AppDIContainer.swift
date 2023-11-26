@@ -5,10 +5,12 @@
 //  Created by Muhammed Kılınç on 26.11.2023.
 //
 
+import DiscoverModule
 import MarketplaceCore
 import Network
 import UIKit
-import DiscoverModule
+
+// MARK: - AppDIContainer
 
 public final class AppDIContainer {
 
@@ -28,6 +30,8 @@ public final class AppDIContainer {
   }()
 
 }
+
+// MARK: DiscoveryModuleBuilder
 
 extension AppDIContainer: DiscoveryModuleBuilder {
   public func buildDiscovery() -> UIViewController {

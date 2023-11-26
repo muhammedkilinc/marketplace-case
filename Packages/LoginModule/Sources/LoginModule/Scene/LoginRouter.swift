@@ -39,6 +39,7 @@ extension LoginRouter: LoginRouterProtocol {
   func routeToDiscovery() {
     let discoveryViewController = discoveryModuleBuilder.buildDiscovery()
     let navigationcontroller = UINavigationController(rootViewController: discoveryViewController)
+    navigationcontroller.modalPresentationStyle = .fullScreen
     viewController?.present(navigationcontroller, animated: true)
   }
 }

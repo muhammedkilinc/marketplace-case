@@ -22,6 +22,7 @@ final class DiscoverViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
   }
 
+  @available(*, unavailable)
   required init?(coder _: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -29,6 +30,10 @@ final class DiscoverViewController: UIViewController {
   // MARK: Internal
 
   let presenter: DiscoverPresenterProtocol
+
+  override func viewDidLoad() {
+    view.backgroundColor = .yellow
+  }
 
 }
 

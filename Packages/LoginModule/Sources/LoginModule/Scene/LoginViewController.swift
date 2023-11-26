@@ -22,6 +22,7 @@ final class LoginViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
   }
 
+  @available(*, unavailable)
   required init?(coder _: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -36,7 +37,6 @@ final class LoginViewController: UIViewController {
   // MARK: Private
 
   private let presenter: LoginPresenterProtocol
-
 
   private lazy var emailTextField: UITextField = {
     let textField = UITextField()

@@ -38,4 +38,3 @@ public final class RequestManager: RequestManaging {
   private let responseHandler: ResponseHandler
 
 }
-

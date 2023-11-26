@@ -91,3 +91,12 @@
 --rules fileHeader
 --rules blankLinesBetweenImports
 --rules wrapConditionalBodies
+--rules spaceAroundBrackets
+--rules spaceAroundOperators
+--rules spaceInsideGenerics
+--rules redundantLet
+--rules redundantInternal
+--rules redundantExtensionACL
+--rules leadingDelimiters
+--rules initCoderUnavailable
+--rules consecutiveBlankLines
