@@ -56,5 +56,6 @@ extension LoginPresenter: LoginInteractorOutput {
 
   func didSuccessLogin() {
     print("Login did success, route to Home")
+    router.routeToDiscovery()
   }
 }

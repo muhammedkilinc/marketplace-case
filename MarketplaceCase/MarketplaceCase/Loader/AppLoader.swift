@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  AppLoader.swift
 //  MarketplaceCase
 //
 //  Created by Muhammed Kılınç on 26.11.2023.

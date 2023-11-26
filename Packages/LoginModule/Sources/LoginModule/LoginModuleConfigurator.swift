@@ -15,13 +15,13 @@ public final class LoginModuleConfigurator {
 
   // MARK: Public
 
-  public static func configureLoginModule() -> UIViewController {
+  public static func configureLoginModule(with dependencies: LoginModuleDependencies) -> UIViewController {
     let emailValidator = DefaultEmailValidator()
     let passwordValidator = DefaultPasswordValidator()
-    let loginService = LoginServiceManager(requestManager: App.shared.requestManager,
-                                           accessTokenRepository: App.shared.accessTokenRepository)
+    let loginService = LoginServiceManager(requestManager: dependencies.requestManager,
+                                           accessTokenRepository: dependencies.accessTokenRepository)
 
-    let router = LoginRouter()
+    let router = LoginRouter(discoveryModuleBuilder: dependencies.discoveryModuleBuilder)
     let interactor = LoginInteractor(emailValidator: emailValidator,
                                      passwordValidator: passwordValidator,
                                      loginService: loginService)

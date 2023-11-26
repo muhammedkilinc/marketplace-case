@@ -14,7 +14,9 @@
 		A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7E92B1295A300D7757A /* DesignSystem */; };
 		A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppConfigurator.swift */; };
 		A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7F82B12A5F400D7757A /* LoginModule */; };
-		A40CA7FB2B12AB8100D7757A /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FA2B12AB8100D7757A /* AppLoader.swift */; };
+		A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */; };
+		A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA8012B13766800D7757A /* DiscoverModule */; };
+		A40CA8062B1376BA00D7757A /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA8052B1376BA00D7757A /* AppLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +30,10 @@
 		A40CA7DE2B128C9300D7757A /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = ../Packages/DesignSystem; sourceTree = "<group>"; };
 		A40CA7F22B129FA800D7757A /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		A40CA7F52B12A55E00D7757A /* LoginModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LoginModule; path = ../Packages/LoginModule; sourceTree = "<group>"; };
-		A40CA7FA2B12AB8100D7757A /* AppLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
 		A40CA7FD2B132AE200D7757A /* MarketplaceCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MarketplaceCore; path = ../Packages/MarketplaceCore; sourceTree = "<group>"; };
+		A40CA7FE2B13662A00D7757A /* DiscoverModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscoverModule; path = ../Packages/DiscoverModule; sourceTree = "<group>"; };
+		A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		A40CA8052B1376BA00D7757A /* AppLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */,
 				A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */,
 				A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */,
 			);
@@ -52,6 +57,7 @@
 				A40CA7DD2B127F0000D7757A /* Network */,
 				A40CA7FD2B132AE200D7757A /* MarketplaceCore */,
 				A40CA7F52B12A55E00D7757A /* LoginModule */,
+				A40CA7FE2B13662A00D7757A /* DiscoverModule */,
 				A40CA7C72B11CC5900D7757A /* MarketplaceCase */,
 				A40CA7C62B11CC5900D7757A /* Products */,
 				A40CA7E82B1295A300D7757A /* Frameworks */,
@@ -69,10 +75,10 @@
 		A40CA7C72B11CC5900D7757A /* MarketplaceCase */ = {
 			isa = PBXGroup;
 			children = (
-				A40CA7C82B11CC5900D7757A /* AppDelegate.swift */,
-				A40CA7F22B129FA800D7757A /* AppConfigurator.swift */,
-				A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */,
-				A40CA7FA2B12AB8100D7757A /* AppLoader.swift */,
+				A40CA8082B1376D800D7757A /* AppDelegates */,
+				A40CA8072B1376C100D7757A /* AppConfigurator */,
+				A40CA8042B13769100D7757A /* Loader */,
+				A40CA8032B13768B00D7757A /* DI */,
 				A40CA7D12B11CC5A00D7757A /* Assets.xcassets */,
 				A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */,
 				A40CA7D62B11CC5A00D7757A /* Info.plist */,
@@ -85,6 +91,39 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40CA8032B13768B00D7757A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A40CA8042B13769100D7757A /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				A40CA8052B1376BA00D7757A /* AppLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		A40CA8072B1376C100D7757A /* AppConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				A40CA7F22B129FA800D7757A /* AppConfigurator.swift */,
+			);
+			path = AppConfigurator;
+			sourceTree = "<group>";
+		};
+		A40CA8082B1376D800D7757A /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				A40CA7C82B11CC5900D7757A /* AppDelegate.swift */,
+				A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +145,7 @@
 			packageProductDependencies = (
 				A40CA7E92B1295A300D7757A /* DesignSystem */,
 				A40CA7F82B12A5F400D7757A /* LoginModule */,
+				A40CA8012B13766800D7757A /* DiscoverModule */,
 			);
 			productName = MarketplaceCase;
 			productReference = A40CA7C52B11CC5900D7757A /* MarketplaceCase.app */;
@@ -162,9 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40CA7C92B11CC5900D7757A /* AppDelegate.swift in Sources */,
-				A40CA7FB2B12AB8100D7757A /* AppLoader.swift in Sources */,
+				A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */,
 				A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */,
 				A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */,
+				A40CA8062B1376BA00D7757A /* AppLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +425,10 @@
 		A40CA7F82B12A5F400D7757A /* LoginModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LoginModule;
+		};
+		A40CA8012B13766800D7757A /* DiscoverModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DiscoverModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

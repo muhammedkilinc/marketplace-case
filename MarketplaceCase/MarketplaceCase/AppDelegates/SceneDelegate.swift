@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       return
     }
     let window = UIWindow(windowScene: windowScene)
-    AppConfigurator.configureRootView(in: window)
+    AppConfigurator.configureRootView(in: window, dependencies: AppDIContainer.shared)
 
     /// 5. Set the window and call makeKeyAndVisible()
     self.window = window

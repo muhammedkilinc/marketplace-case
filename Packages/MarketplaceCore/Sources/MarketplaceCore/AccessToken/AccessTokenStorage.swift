@@ -18,6 +18,10 @@ public protocol AccessTokenStoring {
 
 public final class AccessTokenStorage: AccessTokenStoring {
 
+  // MARK: Lifecycle
+
+  public init() { }
+
   // MARK: Public
 
   public func saveAccessToken(_ token: String) {

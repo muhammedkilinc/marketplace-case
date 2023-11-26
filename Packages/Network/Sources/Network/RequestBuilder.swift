@@ -40,7 +40,7 @@ public struct RequestBuilder: RequestBuilding {
     queryItems.append(contentsOf: additionalParams)
 
     if let urlParams = request.urlParams {
-      var parameterQueryItems = try urlQueryEncoder.encode(urlParams)
+      let parameterQueryItems = try urlQueryEncoder.encode(urlParams)
       queryItems.append(contentsOf: parameterQueryItems)
     }
     components.queryItems = queryItems
