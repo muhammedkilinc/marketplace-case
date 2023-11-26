@@ -9,7 +9,7 @@ import Kingfisher
 import UIKit
 
 extension UIImageView {
-  public func setImage(from url: URL) {
+  public func setImage(from url: URL?) {
     kf.setImage(with: url)
   }
 }

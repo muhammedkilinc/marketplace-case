@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ProductCellEntitity: Hashable {
+struct ProductCellEntity: Hashable {
   let title: String
-  let imageURL: URL
-  let price: String
-  let discount: String
+  let imageURL: URL?
+  let price: String?
+  let discount: NSAttributedString?
 }

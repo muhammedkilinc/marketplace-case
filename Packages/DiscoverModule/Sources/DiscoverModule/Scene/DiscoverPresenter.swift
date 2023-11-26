@@ -33,6 +33,20 @@ final class DiscoverPresenter {
 
   private let interactor: DiscoverInteractorProtocol
   private let router: DiscoverRouterProtocol
+
+  private var discoverFirstList: [ProductEntity]?
+  private var discoverSecondList: [ProductEntity]?
+  private var discoverThirdList: [ProductEntity]?
+
+  private func refreshDiscovers() {
+    let featuredProducts = discoverFirstList?.map { $0.mapToProductCellEntity() }
+    let topRatedProducts = discoverSecondList?.map { $0.mapToProductCellEntity() }
+    let popularProducts = discoverThirdList?.map { $0.mapToProductCellEntity() }
+
+    let dataContainer = DiscoverDataContainer(featuredProducts: featuredProducts, topRatedProducts: topRatedProducts,
+                                              popularProducts: popularProducts)
+    view?.configureCollection(with: dataContainer, delegate: self)
+  }
 }
 
 // MARK: DiscoverPresenterProtocol
@@ -49,15 +63,26 @@ extension DiscoverPresenter: DiscoverPresenterProtocol {
 
 extension DiscoverPresenter: DiscoverInteractorOutput {
   func didFetchDiscoverFirstList(products: [ProductEntity]) {
-    print("didFetchDiscoverFirstList: \(products)")
+    discoverFirstList = products
+    refreshDiscovers()
   }
 
   func didFetchDiscoverSecondList(products: [ProductEntity]) {
-    print("didFetchDiscoverSecondList: \(products)")
+    discoverSecondList = products
+    refreshDiscovers()
   }
 
   func didFetchDiscoverThirdList(products: [ProductEntity]) {
-    print("didFetchDiscoverThirdList: \(products)")
+    discoverThirdList = products
+    refreshDiscovers()
   }
 
+}
+
+// MARK: DiscoverDataSourceDelegate
+
+extension DiscoverPresenter: DiscoverDataSourceDelegate {
+  func didSelectItem(at _: IndexPath, section _: DiscoverDataSource.Section) {
+    // TODO: Handle cell tap action
+  }
 }
