@@ -17,6 +17,7 @@
 		A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */; };
 		A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA8012B13766800D7757A /* DiscoverModule */; };
 		A40CA8062B1376BA00D7757A /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA8052B1376BA00D7757A /* AppLoader.swift */; };
+		A40CA80B2B13C04500D7757A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA80A2B13C04500D7757A /* CommonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A40CA7FE2B13662A00D7757A /* DiscoverModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscoverModule; path = ../Packages/DiscoverModule; sourceTree = "<group>"; };
 		A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		A40CA8052B1376BA00D7757A /* AppLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
+		A40CA8092B13BEBE00D7757A /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonUI; path = ../Packages/CommonUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 				A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */,
 				A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */,
 				A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */,
+				A40CA80B2B13C04500D7757A /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 		A40CA7BC2B11CC5900D7757A = {
 			isa = PBXGroup;
 			children = (
+				A40CA8092B13BEBE00D7757A /* CommonUI */,
 				A40CA7DE2B128C9300D7757A /* DesignSystem */,
 				A40CA7DD2B127F0000D7757A /* Network */,
 				A40CA7FD2B132AE200D7757A /* MarketplaceCore */,
@@ -146,6 +150,7 @@
 				A40CA7E92B1295A300D7757A /* DesignSystem */,
 				A40CA7F82B12A5F400D7757A /* LoginModule */,
 				A40CA8012B13766800D7757A /* DiscoverModule */,
+				A40CA80A2B13C04500D7757A /* CommonUI */,
 			);
 			productName = MarketplaceCase;
 			productReference = A40CA7C52B11CC5900D7757A /* MarketplaceCase.app */;
@@ -429,6 +434,10 @@
 		A40CA8012B13766800D7757A /* DiscoverModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DiscoverModule;
+		};
+		A40CA80A2B13C04500D7757A /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

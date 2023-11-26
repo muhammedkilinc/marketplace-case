@@ -8,10 +8,14 @@ let package = Package(name: "DiscoverModule",
                       products: [// Products define the executables and libraries a package produces, making them visible to other packages.
                         .library(name: "DiscoverModule",
                                  targets: ["DiscoverModule"])],
-                      dependencies: [.package(name: "MarketplaceCore", path: "../MarketplaceCore")],
+                      dependencies: [.package(name: "MarketplaceCore", path: "../MarketplaceCore"),
+                                     .package(name: "CommonUI", path: "../CommonUI"),
+                                     .package(name: "DesignSystem", path: "../DesignSystem")],
                       targets: [// Targets are the basic building blocks of a package, defining a module or a test suite.
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "DiscoverModule",
-                                dependencies: [.product(name: "MarketplaceCore", package: "MarketplaceCore")]),
+                                dependencies: [.product(name: "MarketplaceCore", package: "MarketplaceCore"),
+                                               .product(name: "CommonUI", package: "CommonUI"),
+                                               .product(name: "DesignSystem", package: "DesignSystem")]),
                         .testTarget(name: "DiscoverModuleTests",
                                     dependencies: ["DiscoverModule"])])
