@@ -12,11 +12,7 @@ final class AppConfigurator {
 
   static func configureRootView(in window: UIWindow,
                                 dependencies: AppDIContainer) {
-    let loginDependencies = LoginModuleDependencies(requestManager: dependencies.requestManager,
-                                                    accessTokenRepository: dependencies.accessTokenRepository,
-                                                    discoveryModuleBuilder: dependencies)
-    let loginViewController = LoginModuleConfigurator.configureLoginModule(with: loginDependencies)
-
+    let loginViewController = dependencies.buildLogin()
     let navigationController = UINavigationController(rootViewController: loginViewController)
     window.rootViewController = navigationController
   }

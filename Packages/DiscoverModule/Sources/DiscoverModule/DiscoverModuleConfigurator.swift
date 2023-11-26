@@ -16,9 +16,11 @@ public final class DiscoverModuleConfigurator {
 
   // MARK: Public
 
-  public static func configureDiscoverModule() -> UIViewController {
+  public static func configureDiscoverModule(with dependencies: DiscoverModuleDependencies) -> UIViewController {
     let router = DiscoverRouter()
-    let interactor = DiscoverInteractor()
+    let discoverService = DiscoverServiceManager(requestManager: dependencies.requestManager,
+                                                 accessTokenRepository: dependencies.accessTokenRepository)
+    let interactor = DiscoverInteractor(discoverService: discoverService)
     let presenter = DiscoverPresenter(interactor: interactor, router: router)
     let viewController = DiscoverViewController(presenter: presenter)
 

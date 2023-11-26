@@ -9,7 +9,9 @@ import Foundation
 
 // MARK: - DiscoverPresenterProtocol
 
-protocol DiscoverPresenterProtocol { }
+protocol DiscoverPresenterProtocol {
+  func load()
+}
 
 // MARK: - DiscoverPresenter
 
@@ -35,8 +37,27 @@ final class DiscoverPresenter {
 
 // MARK: DiscoverPresenterProtocol
 
-extension DiscoverPresenter: DiscoverPresenterProtocol { }
+extension DiscoverPresenter: DiscoverPresenterProtocol {
+  func load() {
+    interactor.fetchDiscoverFirstList()
+    interactor.fetchDiscoverSecondList()
+    interactor.fetchDiscoverThirdList()
+  }
+}
 
 // MARK: DiscoverInteractorOutput
 
-extension DiscoverPresenter: DiscoverInteractorOutput { }
+extension DiscoverPresenter: DiscoverInteractorOutput {
+  func didFetchDiscoverFirstList(products: [ProductEntity]) {
+    print("didFetchDiscoverFirstList: \(products)")
+  }
+
+  func didFetchDiscoverSecondList(products: [ProductEntity]) {
+    print("didFetchDiscoverSecondList: \(products)")
+  }
+
+  func didFetchDiscoverThirdList(products: [ProductEntity]) {
+    print("didFetchDiscoverThirdList: \(products)")
+  }
+
+}

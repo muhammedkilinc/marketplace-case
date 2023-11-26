@@ -11,7 +11,7 @@ import Network
 struct LoginRequest: RequestProtocol {
 
   var path = "/login"
-  var requestType: RequestType = .POST
+  var requestType: RequestType = .post
 
   var params: Encodable?
   var urlParams: Encodable? = nil

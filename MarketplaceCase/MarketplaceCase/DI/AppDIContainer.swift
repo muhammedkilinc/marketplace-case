@@ -1,11 +1,12 @@
 //
-//  App.swift
+//  AppDIContainer.swift
 //
 //
 //  Created by Muhammed Kılınç on 26.11.2023.
 //
 
 import DiscoverModule
+import LoginModule
 import MarketplaceCore
 import Network
 import UIKit
@@ -35,6 +36,19 @@ public final class AppDIContainer {
 
 extension AppDIContainer: DiscoveryModuleBuilder {
   public func buildDiscovery() -> UIViewController {
-    DiscoverModuleConfigurator.configureDiscoverModule()
+    let discoverDependencies = DiscoverModuleDependencies(requestManager: requestManager,
+                                                          accessTokenRepository: accessTokenRepository)
+    return DiscoverModuleConfigurator.configureDiscoverModule(with: discoverDependencies)
+  }
+}
+
+// MARK: LoginModuleBuilder
+
+extension AppDIContainer: LoginModuleBuilder {
+  public func buildLogin() -> UIViewController {
+    let loginDependencies = LoginModuleDependencies(requestManager: requestManager,
+                                                    accessTokenRepository: accessTokenRepository,
+                                                    discoveryModuleBuilder: self)
+    return LoginModuleConfigurator.configureLoginModule(with: loginDependencies)
   }
 }

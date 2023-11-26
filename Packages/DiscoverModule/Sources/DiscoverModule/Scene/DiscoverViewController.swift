@@ -33,6 +33,7 @@ final class DiscoverViewController: UIViewController {
 
   override func viewDidLoad() {
     view.backgroundColor = .yellow
+    presenter.load()
   }
 
 }
