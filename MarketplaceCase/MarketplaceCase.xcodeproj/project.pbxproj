@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		A40CA7C92B11CC5900D7757A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7C82B11CC5900D7757A /* AppDelegate.swift */; };
 		A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */; };
-		A40CA7D02B11CC5900D7757A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7CE2B11CC5900D7757A /* Main.storyboard */; };
 		A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D12B11CC5A00D7757A /* Assets.xcassets */; };
 		A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */; };
+		A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7E92B1295A300D7757A /* DesignSystem */; };
+		A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppConfigurator.swift */; };
+		A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7F82B12A5F400D7757A /* LoginModule */; };
+		A40CA7FB2B12AB8100D7757A /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FA2B12AB8100D7757A /* AppLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A40CA7C52B11CC5900D7757A /* MarketplaceCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketplaceCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40CA7C82B11CC5900D7757A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A40CA7CF2B11CC5900D7757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A40CA7D12B11CC5A00D7757A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A40CA7D42B11CC5A00D7757A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A40CA7D62B11CC5A00D7757A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A40CA7DD2B127F0000D7757A /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Network; path = ../Packages/Network; sourceTree = "<group>"; };
 		A40CA7DE2B128C9300D7757A /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = ../Packages/DesignSystem; sourceTree = "<group>"; };
+		A40CA7F22B129FA800D7757A /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		A40CA7F52B12A55E00D7757A /* LoginModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LoginModule; path = ../Packages/LoginModule; sourceTree = "<group>"; };
+		A40CA7FA2B12AB8100D7757A /* AppLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */,
+				A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +49,10 @@
 			children = (
 				A40CA7DE2B128C9300D7757A /* DesignSystem */,
 				A40CA7DD2B127F0000D7757A /* Network */,
+				A40CA7F52B12A55E00D7757A /* LoginModule */,
 				A40CA7C72B11CC5900D7757A /* MarketplaceCase */,
 				A40CA7C62B11CC5900D7757A /* Products */,
+				A40CA7E82B1295A300D7757A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,13 +68,21 @@
 			isa = PBXGroup;
 			children = (
 				A40CA7C82B11CC5900D7757A /* AppDelegate.swift */,
+				A40CA7F22B129FA800D7757A /* AppConfigurator.swift */,
 				A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */,
-				A40CA7CE2B11CC5900D7757A /* Main.storyboard */,
+				A40CA7FA2B12AB8100D7757A /* AppLoader.swift */,
 				A40CA7D12B11CC5A00D7757A /* Assets.xcassets */,
 				A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */,
 				A40CA7D62B11CC5A00D7757A /* Info.plist */,
 			);
 			path = MarketplaceCase;
+			sourceTree = "<group>";
+		};
+		A40CA7E82B1295A300D7757A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +101,10 @@
 			dependencies = (
 			);
 			name = MarketplaceCase;
+			packageProductDependencies = (
+				A40CA7E92B1295A300D7757A /* DesignSystem */,
+				A40CA7F82B12A5F400D7757A /* LoginModule */,
+			);
 			productName = MarketplaceCase;
 			productReference = A40CA7C52B11CC5900D7757A /* MarketplaceCase.app */;
 			productType = "com.apple.product-type.application";
@@ -128,7 +149,6 @@
 			files = (
 				A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */,
 				A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */,
-				A40CA7D02B11CC5900D7757A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40CA7C92B11CC5900D7757A /* AppDelegate.swift in Sources */,
+				A40CA7FB2B12AB8100D7757A /* AppLoader.swift in Sources */,
 				A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */,
+				A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A40CA7CE2B11CC5900D7757A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A40CA7CF2B11CC5900D7757A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +310,6 @@
 				INFOPLIST_FILE = MarketplaceCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +336,6 @@
 				INFOPLIST_FILE = MarketplaceCase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +373,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A40CA7E92B1295A300D7757A /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		A40CA7F82B12A5F400D7757A /* LoginModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A40CA7BD2B11CC5900D7757A /* Project object */;
 }
