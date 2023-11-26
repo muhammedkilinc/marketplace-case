@@ -29,6 +29,7 @@
 		A40CA7F22B129FA800D7757A /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		A40CA7F52B12A55E00D7757A /* LoginModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LoginModule; path = ../Packages/LoginModule; sourceTree = "<group>"; };
 		A40CA7FA2B12AB8100D7757A /* AppLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
+		A40CA7FD2B132AE200D7757A /* MarketplaceCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MarketplaceCore; path = ../Packages/MarketplaceCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +50,7 @@
 			children = (
 				A40CA7DE2B128C9300D7757A /* DesignSystem */,
 				A40CA7DD2B127F0000D7757A /* Network */,
+				A40CA7FD2B132AE200D7757A /* MarketplaceCore */,
 				A40CA7F52B12A55E00D7757A /* LoginModule */,
 				A40CA7C72B11CC5900D7757A /* MarketplaceCase */,
 				A40CA7C62B11CC5900D7757A /* Products */,

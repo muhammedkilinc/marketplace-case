@@ -9,9 +9,7 @@ import UIKit
 
 // MARK: - LoginViewProtocol
 
-protocol LoginViewProtocol: AnyObject {
-  func showValidationResult(isValid: Bool)
-}
+protocol LoginViewProtocol: AnyObject { }
 
 // MARK: - LoginViewController
 
@@ -78,11 +76,16 @@ final class LoginViewController: UIViewController {
   private func didTapLoginButton() {
     let email = emailTextField.text ?? "test@test.com"
     let password = passwordTextField.text ?? "123456"
-    presenter.validateCredentials(email: email, password: password)
+    presenter.didTapLogin(email: email, password: password)
   }
 
   private func setupUI() {
     view.backgroundColor = .white
+
+    #if DEBUG
+    emailTextField.text = "test@test.com"
+    passwordTextField.text = "123456"
+    #endif
 
     loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
 
@@ -98,12 +101,4 @@ final class LoginViewController: UIViewController {
 
 // MARK: LoginViewProtocol
 
-extension LoginViewController: LoginViewProtocol {
-  func showValidationResult(isValid: Bool) {
-    if isValid {
-      print("Login successful!")
-    } else {
-      print("Invalid credentials. Please check your email and password.")
-    }
-  }
-}
+extension LoginViewController: LoginViewProtocol { }

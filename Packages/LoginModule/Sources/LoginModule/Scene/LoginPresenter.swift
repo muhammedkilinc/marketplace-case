@@ -9,7 +9,7 @@ import Foundation
 // MARK: - LoginPresenterProtocol
 
 protocol LoginPresenterProtocol {
-  func validateCredentials(email: String, password: String)
+  func didTapLogin(email: String, password: String)
 }
 
 // MARK: - LoginPresenter
@@ -37,15 +37,24 @@ final class LoginPresenter {
 // MARK: LoginPresenterProtocol
 
 extension LoginPresenter: LoginPresenterProtocol {
-  func validateCredentials(email: String, password: String) {
-    interactor.validateCredentials(email: email, password: password)
+  func didTapLogin(email: String, password: String) {
+    interactor.login(with: email, password: password)
   }
 }
 
 // MARK: LoginInteractorOutput
 
 extension LoginPresenter: LoginInteractorOutput {
-  func didValidateCredentials(isValid: Bool) {
-    view?.showValidationResult(isValid: isValid)
+
+  func didEmailValidationFailed() {
+    print("Email is not valid")
+  }
+
+  func didPasswordValidationFailed() {
+    print("Password is not valid")
+  }
+
+  func didSuccessLogin() {
+    print("Login did success, route to Home")
   }
 }
