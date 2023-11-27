@@ -11,7 +11,7 @@
 		A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */; };
 		A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D12B11CC5A00D7757A /* Assets.xcassets */; };
 		A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */; };
-		A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppConfigurator.swift */; };
+		A40CA7F32B129FA800D7757A /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppWindowConfigurator.swift */; };
 		A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7F82B12A5F400D7757A /* LoginModule */; };
 		A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */; };
 		A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA8012B13766800D7757A /* DiscoverModule */; };
@@ -28,7 +28,7 @@
 		A40CA7D62B11CC5A00D7757A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A40CA7DD2B127F0000D7757A /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Network; path = ../Packages/Network; sourceTree = "<group>"; };
 		A40CA7DE2B128C9300D7757A /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DesignSystem; path = ../Packages/DesignSystem; sourceTree = "<group>"; };
-		A40CA7F22B129FA800D7757A /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		A40CA7F22B129FA800D7757A /* AppWindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindowConfigurator.swift; sourceTree = "<group>"; };
 		A40CA7F52B12A55E00D7757A /* LoginModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = LoginModule; path = ../Packages/LoginModule; sourceTree = "<group>"; };
 		A40CA7FD2B132AE200D7757A /* MarketplaceCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MarketplaceCore; path = ../Packages/MarketplaceCore; sourceTree = "<group>"; };
 		A40CA7FE2B13662A00D7757A /* DiscoverModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DiscoverModule; path = ../Packages/DiscoverModule; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		A40CA8072B1376C100D7757A /* AppConfigurator */ = {
 			isa = PBXGroup;
 			children = (
-				A40CA7F22B129FA800D7757A /* AppConfigurator.swift */,
+				A40CA7F22B129FA800D7757A /* AppWindowConfigurator.swift */,
 			);
 			path = AppConfigurator;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				A40CA7C92B11CC5900D7757A /* AppDelegate.swift in Sources */,
 				A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */,
 				A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */,
-				A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */,
+				A40CA7F32B129FA800D7757A /* AppWindowConfigurator.swift in Sources */,
 				A40CA8062B1376BA00D7757A /* AppLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
