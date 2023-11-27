@@ -32,7 +32,7 @@ public final class TabBarModuleConfigurator {
     thirdViewController.tabBarItem = UITabBarItem(title: nil, image: Images.TabBar.cart, tag: 2)
 
     let fourthViewController = UIViewController()
-    thirdViewController.tabBarItem = UITabBarItem(title: nil, image: Images.TabBar.tag, tag: 3)
+    fourthViewController.tabBarItem = UITabBarItem(title: nil, image: Images.TabBar.tag, tag: 3)
 
     let fifthViewController = UIViewController()
     fifthViewController.tabBarItem = UITabBarItem(title: nil, image: Images.TabBar.settings, tag: 4)

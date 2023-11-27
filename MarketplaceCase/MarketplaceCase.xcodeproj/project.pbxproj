@@ -64,7 +64,7 @@
 				A40CA7FD2B132AE200D7757A /* MarketplaceCore */,
 				A40CA7F52B12A55E00D7757A /* LoginModule */,
 				A40CA7FE2B13662A00D7757A /* DiscoverModule */,
-				A40CA7C72B11CC5900D7757A /* MarketplaceCase */,
+				A40CA7C72B11CC5900D7757A /* App */,
 				A40CA7C62B11CC5900D7757A /* Products */,
 				A40CA7E82B1295A300D7757A /* Frameworks */,
 			);
@@ -78,7 +78,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A40CA7C72B11CC5900D7757A /* MarketplaceCase */ = {
+		A40CA7C72B11CC5900D7757A /* App */ = {
 			isa = PBXGroup;
 			children = (
 				A40CA8082B1376D800D7757A /* AppDelegates */,
@@ -89,7 +89,7 @@
 				A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */,
 				A40CA7D62B11CC5A00D7757A /* Info.plist */,
 			);
-			path = MarketplaceCase;
+			path = App;
 			sourceTree = "<group>";
 		};
 		A40CA7E82B1295A300D7757A /* Frameworks */ = {
@@ -356,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarketplaceCase/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -382,7 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarketplaceCase/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
