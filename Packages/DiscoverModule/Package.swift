@@ -9,13 +9,11 @@ let package = Package(name: "DiscoverModule",
                         .library(name: "DiscoverModule",
                                  targets: ["DiscoverModule"])],
                       dependencies: [.package(name: "MarketplaceCore", path: "../MarketplaceCore"),
-                                     .package(name: "CommonUI", path: "../CommonUI"),
-                                     .package(name: "DesignSystem", path: "../DesignSystem")],
+                                     .package(name: "CommonUI", path: "../CommonUI")],
                       targets: [// Targets are the basic building blocks of a package, defining a module or a test suite.
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "DiscoverModule",
                                 dependencies: [.product(name: "MarketplaceCore", package: "MarketplaceCore"),
-                                               .product(name: "CommonUI", package: "CommonUI"),
-                                               .product(name: "DesignSystem", package: "DesignSystem")]),
+                                               .product(name: "CommonUI", package: "CommonUI")]),
                         .testTarget(name: "DiscoverModuleTests",
                                     dependencies: ["DiscoverModule"])])

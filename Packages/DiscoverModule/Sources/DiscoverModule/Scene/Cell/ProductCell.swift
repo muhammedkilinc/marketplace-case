@@ -34,19 +34,22 @@ final class ProductCell: UICollectionViewCell {
 
   // MARK: Private
 
+  private enum Constants {
+    static let radius: CGFloat = 4
+    static let imageRatio: CGFloat = 1.25
+  }
+
   private lazy var containerView: UIView = {
     let view = UIView()
     view.backgroundColor = .white
-    view.layer.cornerRadius = 4
-    view.layer.borderWidth = 1.0
-    view.layer.borderColor = UIColor.black.cgColor
+    view.layer.cornerRadius = Constants.radius
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
 
   private lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.numberOfLines = 2
+    label.numberOfLines = 3
     label.textColor = .textColor
     label.font = AppFont.font(for: .subheading)
     return label
@@ -91,12 +94,33 @@ final class ProductCell: UICollectionViewCell {
     stackView.addArrangedSubview(priceLabel)
     stackView.addArrangedSubview(discountLabel)
 
-//    containerView.anchorToSuperview()
+    configureConstraints()
 
+    containerView.addShadow(color: .black,
+                            radius: Constants.radius,
+                            opacity: 0.1,
+                            offset: CGSize(width: 1, height: 1))
+  }
+
+  private func configureConstraints() {
+    configureContainerConstraints()
+
+    configureStackViewConstraints()
+
+    productImageView.setRatio(ratio: Constants.imageRatio)
+
+    let bottomConstraint = containerView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
+    bottomConstraint.priority = .defaultHigh
+    bottomConstraint.isActive = true
+  }
+
+  private func configureContainerConstraints() {
     NSLayoutConstraint.activate([containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
                                  containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                                  containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)])
+  }
 
+  private func configureStackViewConstraints() {
     NSLayoutConstraint.activate([stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Spacing.medium),
                                  stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor,
                                                                     constant: Spacing.medium),
@@ -104,17 +128,6 @@ final class ProductCell: UICollectionViewCell {
                                                                    constant: -Spacing.medium),
                                  stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor,
                                                                      constant: -Spacing.medium)])
-
-    productImageView.setRatio(ratio: 4 / 3)
-
-    let bottomConstraint = containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-    bottomConstraint.priority = .defaultHigh
-    bottomConstraint.isActive = true
-
-    containerView.setContentCompressionResistancePriority(.required, for: .vertical)
-    titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-    priceLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-    discountLabel.setContentCompressionResistancePriority(.required, for: .vertical)
   }
 
 }

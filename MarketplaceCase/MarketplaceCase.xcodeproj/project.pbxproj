@@ -11,7 +11,6 @@
 		A40CA7CB2B11CC5900D7757A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7CA2B11CC5900D7757A /* SceneDelegate.swift */; };
 		A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D12B11CC5A00D7757A /* Assets.xcassets */; };
 		A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */; };
-		A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7E92B1295A300D7757A /* DesignSystem */; };
 		A40CA7F32B129FA800D7757A /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppConfigurator.swift */; };
 		A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7F82B12A5F400D7757A /* LoginModule */; };
 		A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */; };
@@ -45,7 +44,6 @@
 			files = (
 				A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */,
 				A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */,
-				A40CA7EA2B1295A300D7757A /* DesignSystem in Frameworks */,
 				A40CA80B2B13C04500D7757A /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +145,6 @@
 			);
 			name = MarketplaceCase;
 			packageProductDependencies = (
-				A40CA7E92B1295A300D7757A /* DesignSystem */,
 				A40CA7F82B12A5F400D7757A /* LoginModule */,
 				A40CA8012B13766800D7757A /* DiscoverModule */,
 				A40CA80A2B13C04500D7757A /* CommonUI */,
@@ -423,10 +420,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A40CA7E92B1295A300D7757A /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
 		A40CA7F82B12A5F400D7757A /* LoginModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LoginModule;

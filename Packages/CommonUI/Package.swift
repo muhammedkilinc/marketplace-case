@@ -8,10 +8,12 @@ let package = Package(name: "CommonUI",
                       products: [// Products define the executables and libraries a package produces, making them visible to other packages.
                         .library(name: "CommonUI",
                                  targets: ["CommonUI"])],
-                      dependencies: [.package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0"))],
+                      dependencies: [.package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0")),
+                                     .package(name: "DesignSystem", path: "../DesignSystem")],
                       targets: [// Targets are the basic building blocks of a package, defining a module or a test suite.
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "CommonUI",
-                                dependencies: [.product(name: "Kingfisher", package: "Kingfisher")]),
+                                dependencies: [.product(name: "Kingfisher", package: "Kingfisher"),
+                                               .product(name: "DesignSystem", package: "DesignSystem")]),
                         .testTarget(name: "CommonUITests",
                                     dependencies: ["CommonUI"])])

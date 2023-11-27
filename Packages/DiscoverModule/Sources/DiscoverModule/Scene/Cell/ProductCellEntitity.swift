@@ -12,4 +12,5 @@ struct ProductCellEntity: Hashable {
   let imageURL: URL?
   let price: String?
   let discount: NSAttributedString?
+  let id = UUID()
 }
