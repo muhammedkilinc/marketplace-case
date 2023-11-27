@@ -39,7 +39,6 @@ final class TitleSupplementaryView: UICollectionReusableView {
 extension TitleSupplementaryView {
   func configure() {
     addSubview(label)
-    let inset = CGFloat(10)
-    label.anchorToSuperview(with: UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset))
+    label.anchorToSuperview(with: UIEdgeInsets.insetWithAll(Spacing.medium))
   }
 }
