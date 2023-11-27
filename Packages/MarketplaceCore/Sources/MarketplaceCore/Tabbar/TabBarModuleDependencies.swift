@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import MarketplaceCore
 import Network
 
 public struct TabBarModuleDependencies {
