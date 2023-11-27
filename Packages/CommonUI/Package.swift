@@ -14,6 +14,4 @@ let package = Package(name: "CommonUI",
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "CommonUI",
                                 dependencies: [.product(name: "Kingfisher", package: "Kingfisher"),
-                                               .product(name: "DesignSystem", package: "DesignSystem")]),
-                        .testTarget(name: "CommonUITests",
-                                    dependencies: ["CommonUI"])])
+                                               .product(name: "DesignSystem", package: "DesignSystem")])])

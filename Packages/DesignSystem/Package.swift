@@ -12,6 +12,4 @@ let package = Package(name: "DesignSystem",
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "DesignSystem",
                                 dependencies: [],
-                                resources: [.process("Fonts")]),
-                        .testTarget(name: "DesignSystemTests",
-                                    dependencies: ["DesignSystem"])])
+                                resources: [.process("Fonts")])])

@@ -14,6 +14,4 @@ let package = Package(name: "MarketplaceCore",
                         // Targets can depend on other targets in this package and products from dependencies.
                         .target(name: "MarketplaceCore",
                                 dependencies: [.product(name: "Network", package: "Network"),
-                                               .product(name: "Localization", package: "Localization")]),
-                        .testTarget(name: "MarketplaceCoreTests",
-                                    dependencies: ["MarketplaceCore"])])
+                                               .product(name: "Localization", package: "Localization")])])

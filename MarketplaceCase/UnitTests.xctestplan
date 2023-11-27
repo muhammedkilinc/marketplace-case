@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "57D783F3-DD19-4387-B364-F7C38BC9C7F8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/Packages\/LoginModule",
+        "identifier" : "LoginModuleTests",
+        "name" : "LoginModuleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

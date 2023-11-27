@@ -36,6 +36,7 @@
 		A40CA8052B1376BA00D7757A /* AppLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLoader.swift; sourceTree = "<group>"; };
 		A40CA8092B13BEBE00D7757A /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CommonUI; path = ../Packages/CommonUI; sourceTree = "<group>"; };
 		A42BC1022B1512C700C4B8A4 /* Localization */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Localization; path = ../Packages/Localization; sourceTree = "<group>"; };
+		A42BC1032B15253800C4B8A4 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		A40CA7BC2B11CC5900D7757A = {
 			isa = PBXGroup;
 			children = (
+				A42BC1032B15253800C4B8A4 /* UnitTests.xctestplan */,
 				A42BC1022B1512C700C4B8A4 /* Localization */,
 				A40CA8092B13BEBE00D7757A /* CommonUI */,
 				A40CA7DE2B128C9300D7757A /* DesignSystem */,
