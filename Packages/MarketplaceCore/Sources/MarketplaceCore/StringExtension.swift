@@ -12,3 +12,9 @@ extension String {
     URL(string: self)
   }
 }
+
+extension String? {
+  public var orEmpty: String {
+    self ?? String()
+  }
+}

@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - LoginRouterProtocol
 
-protocol LoginRouterProtocol {
+protocol LoginRouterProtocol: AlertRoutable {
   func routeToDiscovery()
 }
 

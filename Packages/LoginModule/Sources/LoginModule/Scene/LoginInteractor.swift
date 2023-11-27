@@ -72,13 +72,13 @@ extension LoginInteractor: LoginInteractorProtocol {
 
   // MARK: Private
 
-  private func validateCredentials(email: String, password _: String) -> Bool {
+  private func validateCredentials(email: String, password: String) -> Bool {
     guard emailValidator.isValidEmail(email) else {
       output?.didEmailValidationFailed()
       return false
     }
-    guard emailValidator.isValidEmail(email) else {
-      output?.didEmailValidationFailed()
+    guard passwordValidator.isValidPassword(password) else {
+      output?.didPasswordValidationFailed()
       return false
     }
     return true

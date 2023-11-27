@@ -5,11 +5,12 @@
 //
 
 import Foundation
+import Localization
 
 // MARK: - LoginPresenterProtocol
 
 protocol LoginPresenterProtocol {
-  func didTapLogin(email: String, password: String)
+  func didTapLogin(email: String?, password: String?)
 }
 
 // MARK: - LoginPresenter
@@ -37,8 +38,8 @@ final class LoginPresenter {
 // MARK: LoginPresenterProtocol
 
 extension LoginPresenter: LoginPresenterProtocol {
-  func didTapLogin(email: String, password: String) {
-    interactor.login(with: email, password: password)
+  func didTapLogin(email: String?, password: String?) {
+    interactor.login(with: email.orEmpty, password: password.orEmpty)
   }
 }
 
@@ -47,15 +48,14 @@ extension LoginPresenter: LoginPresenterProtocol {
 extension LoginPresenter: LoginInteractorOutput {
 
   func didEmailValidationFailed() {
-    print("Email is not valid")
+    router.routeToAlert(title: Strings.emailValidationAlert)
   }
 
   func didPasswordValidationFailed() {
-    print("Password is not valid")
+    router.routeToAlert(title: Strings.passwordValidationAlert)
   }
 
   func didSuccessLogin() {
-    print("Login did success, route to Home")
     router.routeToDiscovery()
   }
 }

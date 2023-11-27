@@ -6,6 +6,7 @@
 
 import CommonUI
 import DesignSystem
+import Localization
 import UIKit
 
 // MARK: - LoginViewProtocol
@@ -47,7 +48,7 @@ final class LoginViewController: UIViewController {
   private lazy var emailTextField: UITextField = {
     let textField = UITextField()
     textField.font = AppFont.font(for: .subheading)
-    textField.placeholder = "E-mail address"
+    textField.placeholder = Strings.emailPlaceholder
     textField.borderStyle = .line
     textField.translatesAutoresizingMaskIntoConstraints = false
     return textField
@@ -56,7 +57,7 @@ final class LoginViewController: UIViewController {
   private lazy var passwordTextField: UITextField = {
     let textField = UITextField()
     textField.font = AppFont.font(for: .subheading)
-    textField.placeholder = "Password"
+    textField.placeholder = Strings.passwordPlaceholder
     textField.borderStyle = .line
     textField.translatesAutoresizingMaskIntoConstraints = false
     return textField
@@ -76,7 +77,7 @@ final class LoginViewController: UIViewController {
   private lazy var loginButton: SolidButton = {
     let button = SolidButton()
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Login", for: .normal)
+    button.setTitle(Strings.loginButtonTitle, for: .normal)
     return button
   }()
 
@@ -92,8 +93,8 @@ final class LoginViewController: UIViewController {
 
   @objc
   private func didTapLoginButton() {
-    let email = emailTextField.text ?? "test@test.com"
-    let password = passwordTextField.text ?? "123456"
+    let email = emailTextField.text
+    let password = passwordTextField.text
     presenter.didTapLogin(email: email, password: password)
   }
 
