@@ -56,6 +56,6 @@ extension LoginPresenter: LoginInteractorOutput {
   }
 
   func didSuccessLogin() {
-    router.routeToDiscovery()
+    router.routeToTabBar()
   }
 }

@@ -10,7 +10,7 @@ import UIKit
 // MARK: - LoginRouterProtocol
 
 protocol LoginRouterProtocol: AlertRoutable {
-  func routeToDiscovery()
+  func routeToTabBar()
 }
 
 // MARK: - LoginRouter
@@ -19,8 +19,8 @@ final class LoginRouter {
 
   // MARK: Lifecycle
 
-  init(discoveryModuleBuilder: DiscoveryModuleBuilder) {
-    self.discoveryModuleBuilder = discoveryModuleBuilder
+  init(tabBarModuleBuilder: TabBarModuleBuilder) {
+    self.tabBarModuleBuilder = tabBarModuleBuilder
   }
 
   // MARK: Internal
@@ -29,16 +29,16 @@ final class LoginRouter {
 
   // MARK: Private
 
-  private let discoveryModuleBuilder: DiscoveryModuleBuilder
+  private let tabBarModuleBuilder: TabBarModuleBuilder
 
 }
 
 // MARK: LoginRouterProtocol
 
 extension LoginRouter: LoginRouterProtocol {
-  func routeToDiscovery() {
-    let discoveryViewController = discoveryModuleBuilder.buildDiscovery()
-    let navigationcontroller = UINavigationController(rootViewController: discoveryViewController)
+  func routeToTabBar() {
+    let tabBarViewController = tabBarModuleBuilder.buildTabBar()
+    let navigationcontroller = UINavigationController(rootViewController: tabBarViewController)
     navigationcontroller.modalPresentationStyle = .fullScreen
     viewController?.present(navigationcontroller, animated: true)
   }

@@ -12,6 +12,17 @@
         }
       }
     },
+    "discover-tabbar-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover"
+          }
+        }
+      }
+    },
     "email-placeholder" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -25,6 +36,17 @@
     },
     "email-validation-alert-text" : {
       "extractionState" : "manual"
+    },
+    "home-title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HOME"
+          }
+        }
+      }
     },
     "login-button-title" : {
       "extractionState" : "manual",

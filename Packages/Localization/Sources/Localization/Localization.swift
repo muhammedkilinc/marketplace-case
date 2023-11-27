@@ -8,4 +8,6 @@ public enum Strings {
   public static let alertDoneTitle = String(localized: "alert-done", bundle: .module)
   public static let emailValidationAlert = String(localized: "email-validation-alert-text", bundle: .module)
   public static let passwordValidationAlert = String(localized: "password-validation-alert-text", bundle: .module)
+  public static let discoverTabbarTitle = String(localized: "discover-tabbar-title", bundle: .module)
+  public static let homeTitle = String(localized: "home-title", bundle: .module)
 }

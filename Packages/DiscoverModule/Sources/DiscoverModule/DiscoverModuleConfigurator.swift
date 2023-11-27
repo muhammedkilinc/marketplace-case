@@ -16,7 +16,7 @@ public final class DiscoverModuleConfigurator {
 
   // MARK: Public
 
-  public static func configureDiscoverModule(with dependencies: DiscoverModuleDependencies) -> UIViewController {
+  public static func configure(with dependencies: DiscoverModuleDependencies) -> UIViewController {
     let router = DiscoverRouter()
     let discoverService = DiscoverServiceManager(requestManager: dependencies.requestManager,
                                                  accessTokenRepository: dependencies.accessTokenRepository)

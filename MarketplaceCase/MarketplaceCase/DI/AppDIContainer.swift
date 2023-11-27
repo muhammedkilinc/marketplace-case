@@ -38,7 +38,7 @@ extension AppDIContainer: DiscoveryModuleBuilder {
   public func buildDiscovery() -> UIViewController {
     let discoverDependencies = DiscoverModuleDependencies(requestManager: requestManager,
                                                           accessTokenRepository: accessTokenRepository)
-    return DiscoverModuleConfigurator.configureDiscoverModule(with: discoverDependencies)
+    return DiscoverModuleConfigurator.configure(with: discoverDependencies)
   }
 }
 
@@ -48,7 +48,16 @@ extension AppDIContainer: LoginModuleBuilder {
   public func buildLogin() -> UIViewController {
     let loginDependencies = LoginModuleDependencies(requestManager: requestManager,
                                                     accessTokenRepository: accessTokenRepository,
-                                                    discoveryModuleBuilder: self)
-    return LoginModuleConfigurator.configureLoginModule(with: loginDependencies)
+                                                    tabBarModuleBuilder: self)
+    return LoginModuleConfigurator.configure(with: loginDependencies)
+  }
+}
+
+// MARK: TabBarModuleBuilder
+
+extension AppDIContainer: TabBarModuleBuilder {
+  public func buildTabBar() -> UIViewController {
+    let tabBarModuleDependencies = TabBarModuleDependencies(discoveryModuleBuilder: self)
+    return TabBarModuleConfigurator.configure(with: tabBarModuleDependencies)
   }
 }

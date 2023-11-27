@@ -12,13 +12,13 @@ import Network
 public struct LoginModuleDependencies {
   let requestManager: RequestManaging
   let accessTokenRepository: AccessTokenRepositoryProtocol
-  let discoveryModuleBuilder: DiscoveryModuleBuilder
+  let tabBarModuleBuilder: TabBarModuleBuilder
 
   public init(requestManager: RequestManaging,
               accessTokenRepository: AccessTokenRepositoryProtocol,
-              discoveryModuleBuilder: DiscoveryModuleBuilder) {
+              tabBarModuleBuilder: TabBarModuleBuilder) {
     self.requestManager = requestManager
     self.accessTokenRepository = accessTokenRepository
-    self.discoveryModuleBuilder = discoveryModuleBuilder
+    self.tabBarModuleBuilder = tabBarModuleBuilder
   }
 }
