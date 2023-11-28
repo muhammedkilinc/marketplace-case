@@ -12,11 +12,14 @@
 		A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D12B11CC5A00D7757A /* Assets.xcassets */; };
 		A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */; };
 		A40CA7F32B129FA800D7757A /* AppWindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7F22B129FA800D7757A /* AppWindowConfigurator.swift */; };
-		A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA7F82B12A5F400D7757A /* LoginModule */; };
 		A40CA8002B136B9D00D7757A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA7FF2B136B9D00D7757A /* AppDIContainer.swift */; };
-		A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA8012B13766800D7757A /* DiscoverModule */; };
 		A40CA8062B1376BA00D7757A /* AppLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40CA8052B1376BA00D7757A /* AppLoader.swift */; };
-		A40CA80B2B13C04500D7757A /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = A40CA80A2B13C04500D7757A /* CommonUI */; };
+		A468CD442B167FCF0006EBB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A468CD432B167FCF0006EBB2 /* GoogleService-Info.plist */; };
+		A468CD482B1682130006EBB2 /* Analytic in Frameworks */ = {isa = PBXBuildFile; productRef = A468CD472B1682130006EBB2 /* Analytic */; };
+		A468CD4A2B1682130006EBB2 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = A468CD492B1682130006EBB2 /* CommonUI */; };
+		A468CD4C2B1682130006EBB2 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A468CD4B2B1682130006EBB2 /* DesignSystem */; };
+		A4ADA8742B16848600F2F452 /* DiscoverModule in Frameworks */ = {isa = PBXBuildFile; productRef = A4ADA8732B16848600F2F452 /* DiscoverModule */; };
+		A4ADA8762B16848B00F2F452 /* LoginModule in Frameworks */ = {isa = PBXBuildFile; productRef = A4ADA8752B16848B00F2F452 /* LoginModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,8 @@
 		A42BC1022B1512C700C4B8A4 /* Localization */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Localization; path = ../Packages/Localization; sourceTree = "<group>"; };
 		A42BC1032B15253800C4B8A4 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 		A42BC1042B165E8A00C4B8A4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A42BC1052B165F4A00C4B8A4 /* Analytic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Analytic; path = ../Packages/Analytic; sourceTree = "<group>"; };
+		A468CD432B167FCF0006EBB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +50,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40CA8022B13766800D7757A /* DiscoverModule in Frameworks */,
-				A40CA7F92B12A5F400D7757A /* LoginModule in Frameworks */,
-				A40CA80B2B13C04500D7757A /* CommonUI in Frameworks */,
+				A4ADA8762B16848B00F2F452 /* LoginModule in Frameworks */,
+				A468CD4C2B1682130006EBB2 /* DesignSystem in Frameworks */,
+				A468CD482B1682130006EBB2 /* Analytic in Frameworks */,
+				A468CD4A2B1682130006EBB2 /* CommonUI in Frameworks */,
+				A4ADA8742B16848600F2F452 /* DiscoverModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A42BC1032B15253800C4B8A4 /* UnitTests.xctestplan */,
+				A42BC1052B165F4A00C4B8A4 /* Analytic */,
 				A42BC1022B1512C700C4B8A4 /* Localization */,
 				A40CA8092B13BEBE00D7757A /* CommonUI */,
 				A40CA7DE2B128C9300D7757A /* DesignSystem */,
@@ -89,6 +97,7 @@
 				A40CA7D12B11CC5A00D7757A /* Assets.xcassets */,
 				A40CA7D32B11CC5A00D7757A /* LaunchScreen.storyboard */,
 				A40CA7D62B11CC5A00D7757A /* Info.plist */,
+				A468CD432B167FCF0006EBB2 /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -150,9 +159,11 @@
 			);
 			name = MarketplaceCase;
 			packageProductDependencies = (
-				A40CA7F82B12A5F400D7757A /* LoginModule */,
-				A40CA8012B13766800D7757A /* DiscoverModule */,
-				A40CA80A2B13C04500D7757A /* CommonUI */,
+				A468CD472B1682130006EBB2 /* Analytic */,
+				A468CD492B1682130006EBB2 /* CommonUI */,
+				A468CD4B2B1682130006EBB2 /* DesignSystem */,
+				A4ADA8732B16848600F2F452 /* DiscoverModule */,
+				A4ADA8752B16848B00F2F452 /* LoginModule */,
 			);
 			productName = MarketplaceCase;
 			productReference = A40CA7C52B11CC5900D7757A /* MarketplaceCase.app */;
@@ -199,6 +210,7 @@
 			files = (
 				A40CA7D52B11CC5A00D7757A /* LaunchScreen.storyboard in Resources */,
 				A40CA7D22B11CC5A00D7757A /* Assets.xcassets in Resources */,
+				A468CD442B167FCF0006EBB2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,17 +443,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A40CA7F82B12A5F400D7757A /* LoginModule */ = {
+		A468CD472B1682130006EBB2 /* Analytic */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = LoginModule;
+			productName = Analytic;
 		};
-		A40CA8012B13766800D7757A /* DiscoverModule */ = {
+		A468CD492B1682130006EBB2 /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
+		};
+		A468CD4B2B1682130006EBB2 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		A4ADA8732B16848600F2F452 /* DiscoverModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DiscoverModule;
 		};
-		A40CA80A2B13C04500D7757A /* CommonUI */ = {
+		A4ADA8752B16848B00F2F452 /* LoginModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = CommonUI;
+			productName = LoginModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,6 +5,7 @@
 //  Created by Muhammed Kılınç on 26.11.2023.
 //
 
+import Analytic
 import DiscoverModule
 import LoginModule
 import MarketplaceCore
@@ -23,7 +24,8 @@ public final class AppDIContainer {
 
   public static let shared = AppDIContainer()
 
-  public lazy var requestManager = RequestManager()
+  public lazy var requestManager: RequestManaging = RequestManager()
+  public lazy var analyticLoader: AnalyticLoadable = AnalyticLoader()
 
   public lazy var accessTokenRepository: AccessTokenRepositoryProtocol = {
     let accessTokenDataStore = AccessTokenStorage()
