@@ -46,7 +46,7 @@ final class DiscoverPresenter {
     let dataContainer = DiscoverDataContainer(featuredProducts: featuredProducts,
                                               topRatedProducts: topRatedProducts,
                                               popularProducts: popularProducts)
-    view?.configureCollection(with: dataContainer, delegate: self)
+    view?.refreshData(with: dataContainer)
   }
 }
 
@@ -57,6 +57,7 @@ extension DiscoverPresenter: DiscoverPresenterProtocol {
     interactor.fetchDiscoverFirstList()
     interactor.fetchDiscoverSecondList()
     interactor.fetchDiscoverThirdList()
+    view?.configureCollection(delegate: self)
   }
 }
 

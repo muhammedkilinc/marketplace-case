@@ -11,8 +11,8 @@ import UIKit
 // MARK: - DiscoverViewProtocol
 
 protocol DiscoverViewProtocol: AnyObject {
-  func configureCollection(with dataContainer: DiscoverDataContainer,
-                           delegate: DiscoverDataSourceDelegate)
+  func configureCollection(delegate: DiscoverDataSourceDelegate)
+  func refreshData(with dataContainer: DiscoverDataContainer)
 }
 
 // MARK: - DiscoverViewController
@@ -59,9 +59,11 @@ final class DiscoverViewController: UIViewController {
 // MARK: DiscoverViewProtocol
 
 extension DiscoverViewController: DiscoverViewProtocol {
-  func configureCollection(with dataContainer: DiscoverDataContainer,
-                           delegate: DiscoverDataSourceDelegate) {
+  func configureCollection(delegate: DiscoverDataSourceDelegate) {
     discoverDataSource.setDelegate(delegate)
+  }
+
+  func refreshData(with dataContainer: DiscoverDataContainer) {
     discoverDataSource.update(with: dataContainer, animate: true)
   }
 }
