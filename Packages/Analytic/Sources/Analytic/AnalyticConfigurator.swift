@@ -5,8 +5,8 @@
 //  Created by Muhammed Kılınç on 28.11.2023.
 //
 
-import FirebaseCore
 import FirebaseAnalytics
+import FirebaseCore
 import FirebaseCrashlytics
 
 // MARK: - AnalyticLoadable
@@ -17,7 +17,7 @@ public protocol AnalyticLoadable {
 
 // MARK: - AnalyticLoader
 
-public class AnalyticLoader: AnalyticLoadable {
+public final class AnalyticLoader: AnalyticLoadable {
 
   // MARK: Lifecycle
 

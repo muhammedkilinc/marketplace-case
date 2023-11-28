@@ -39,11 +39,12 @@ final class DiscoverPresenter {
   private var discoverThirdList: [ProductEntity]?
 
   private func refreshDiscovers() {
-    let featuredProducts = discoverFirstList?.map { $0.mapToProductCellEntity() }
-    let topRatedProducts = discoverSecondList?.map { $0.mapToProductCellEntity() }
-    let popularProducts = discoverThirdList?.map { $0.mapToProductCellEntity() }
+    let featuredProducts = discoverFirstList?.map { ProductCellEntityMapper.map(from: $0) }
+    let topRatedProducts = discoverSecondList?.map { ProductCellEntityMapper.map(from: $0) }
+    let popularProducts = discoverThirdList?.map { ProductCellEntityMapper.map(from: $0) }
 
-    let dataContainer = DiscoverDataContainer(featuredProducts: featuredProducts, topRatedProducts: topRatedProducts,
+    let dataContainer = DiscoverDataContainer(featuredProducts: featuredProducts,
+                                              topRatedProducts: topRatedProducts,
                                               popularProducts: popularProducts)
     view?.configureCollection(with: dataContainer, delegate: self)
   }
