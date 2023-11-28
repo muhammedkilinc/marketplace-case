@@ -60,6 +60,7 @@ final class LoginViewController: UIViewController {
     textField.placeholder = Strings.passwordPlaceholder
     textField.borderStyle = .line
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.isSecureTextEntry = true
     return textField
   }()
 
