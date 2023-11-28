@@ -9,6 +9,12 @@
             "state" : "translated",
             "value" : "OK"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Discover"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keşfet"
           }
         }
       }
@@ -31,11 +43,31 @@
             "state" : "translated",
             "value" : "E-mail address"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
         }
       }
     },
     "email-validation-alert-text" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "email validation error"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email validasyon hatası"
+          }
+        }
+      }
     },
     "home-title" : {
       "extractionState" : "manual",
@@ -44,6 +76,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "HOME"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anasayfa"
           }
         }
       }
@@ -73,11 +111,31 @@
             "state" : "translated",
             "value" : "Password"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre"
+          }
         }
       }
     },
     "password-validation-alert-text" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "password valiidation error"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "password validasyon hatası"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
