@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "46EC8674-2C88-412A-88FD-BBAFC7BACE76",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/LoginModule",
+        "identifier" : "LoginModuleTests",
+        "name" : "LoginModuleTests"
+      }
+    }
+  ],
+  "version" : 1
+}
